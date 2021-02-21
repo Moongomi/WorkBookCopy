@@ -39,9 +39,9 @@ function inputBook(workBook){
     document.getElementsByClassName('form-control')[0].value = workBook[0][0][0];
     document.getElementsByClassName('form-control')[1].value = workBook[0][0][1];
     
-   for(var i = 0; i < workBook[1].length; i++){
+    for(var i = 0; i < workBook[1].length; i++){
         $('input[name=problem]').val(workBook[1][i]);
-        var actualCode = '(' + function(workBook) {
+        var actualCode = '(' + function() {
             var e = jQuery.Event("keypress");
             e.which = 13;
             $('input[name=problem]').trigger(e);
